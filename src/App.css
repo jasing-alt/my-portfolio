@@ -1,16 +1,263 @@
+.header {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  background-color: #FFB6C1; 
+  padding: 25px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  gap: 50px;
+}
+
+.logo {
+  text-align: left;
+}
+
+.name {
+  font-family: 'Dancing Script', cursive;
+  color: #FF1493;
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-family: 'Georgia', serif;
+  color: #8B4513;
+  margin: 5px 0 0 0;
+  font-size: 1rem;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  color: #8B4513;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  display: block;
+  padding: 5px 0;
+}
+
+.nav-links li a:hover {
+  color: #FF69B4;
+}
+
+.nav-links li.active a {
+  color: #FF1493;
+  font-weight: bold;
+}
+
+.nav-links li::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #FF1493;
+  transition: width 0.3s ease;
+}
+
+.nav-links li.active::after {
+  width: 100%;
+}
+
 section {
-  padding: 20px;
+  padding: 200px 30px 60px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
 }
 
-@media (max-width: 768px) {
-  section {
-    font-size: 14px;
-  }
+section h2 {
+  color: #FF1493;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #FF69B4;
+  padding-bottom: 10px;
 }
 
-@media (min-width: 769px) {
-  section {
-    font-size: 18px;
-  }
+#about {
+  background-color: rgba(255, 182, 193, 0.3);
+  text-align: left;
 }
 
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-image {
+  flex: 0 0 auto;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.me {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #FF69B4;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
+}
+
+#about h2 {
+  color: #FF1493;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #FF69B4;
+  padding-bottom: 10px;
+}
+
+.greeting {
+  color: #FF69B4;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-family: 'Dancing Script', cursive;
+}
+
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #8B4513;
+  max-width: 600px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.skill-category {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255, 105, 180, 0.2);
+  border: 1px solid #FFB6C1;
+}
+
+.skill-category h3 {
+  color: #FF1493;
+  margin-bottom: 15px;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-category li {
+  padding: 8px 0;
+  color: #8B4513;
+  border-bottom: 1px solid #FFB6C1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.skill-category li:last-child {
+  border-bottom: none;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255, 105, 180, 0.2);
+  transition: transform 0.3s ease;
+  border: 1px solid #FFB6C1;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  color: #FF1493;
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  color: #8B4513;
+  line-height: 1.6;
+}
+
+.education-item {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255, 105, 180, 0.2);
+  border: 1px solid #FFB6C1;
+}
+
+.education-item h3 {
+  color: #FF1493;
+  margin-bottom: 10px;
+}
+
+.degree {
+  font-weight: 600;
+  color: #8B4513;
+  margin: 5px 0;
+}
+
+.duration {
+  color: #FF69B4;
+  font-style: italic;
+}
+
+.contact-info {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255, 105, 180, 0.2);
+  border: 1px solid #FFB6C1;
+}
+
+.contact-info p {
+  margin: 15px 0;
+  color: #8B4513;
+  font-size: 1.1rem;
+}
+
+.contact-info strong {
+  color: #FF1493;
+}
