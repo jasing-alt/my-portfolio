@@ -148,8 +148,9 @@ section h2 {
 
 .skills-container {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px 60px;
   margin-top: 20px;
 }
 
@@ -177,6 +178,10 @@ section h2 {
 }
 
 @media (max-width: 700px) {
+  .skills-container {
+    flex-direction: column;
+  }
+
   .skill-category ul {
     grid-auto-flow: row;
     grid-template-rows: none;
