@@ -168,12 +168,14 @@ section h2 {
 .skill-category ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 25px;
 }
 
 .skill-category li {
   padding: 8px 0;
   color: #8B4513;
-  border-bottom: 1px solid #FFB6C1;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -183,10 +185,6 @@ section h2 {
   width: 30px;
   height: 30px;
   object-fit: contain;
-}
-
-.skill-category li:last-child {
-  border-bottom: none;
 }
 
 .projects-container {
