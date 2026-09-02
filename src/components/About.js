@@ -14,7 +14,6 @@ function About() {
         </div>
         <div className="about-content">
           <h2>About Me</h2>
-          <h3 className="greeting">Hi, I'm Jassy</h3>
           <p>A Computer Technology student at USJR majoring in Software Development. I enjoy creating responsive websites using HTML, CSS, JavaScript, PHP, and React, always aiming for clean design and practical functionality.<br></br>
 
         <br></br> Beyond coding, I find inspiration in hip‑hop dance and anime, which fuel my creativity and balance my technical journey. These passions remind me to stay disciplined yet imaginative in everything I do. <br></br>

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
 function Header() {
-  const [activeSection, setActiveSection] = useState('about');
+  const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['about', 'skills', 'projects', 'education', 'contact'];
+      const sections = ['hero', 'about', 'skills', 'projects', 'education', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -37,10 +37,13 @@ function Header() {
     <header className="header">
         <div className="logo">
             <h1 className="name">Jassy Faburada</h1>
-            <p className="subtitle">Web Developer</p>
+            <p className="subtitle">Software Developer</p>
         </div>
       <nav>
         <ul className="nav-links">
+          <li className={activeSection === 'hero' ? 'active' : ''}>
+            <a href="#hero" onClick={(e) => { e.preventDefault(); scrollToSection('hero'); }}>Home</a>
+          </li>
           <li className={activeSection === 'about' ? 'active' : ''}>
             <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About</a>
           </li>
